@@ -1,0 +1,1748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230129 13:41:21.907" rpa="false" schemaversion="3">
+<suite id="s1" name="Atlassian" source="C:\Users\nicolas.gomes\PycharmProjects\pythonProject\TestCases\AtlassianTS\Atlassian.robot">
+<test id="s1-t1" name="Go to Products Jira Software Features" line="15">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:41:22.269" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:41:22.269" endtime="20230129 13:41:27.094"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:27.433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:27.094" endtime="20230129 13:41:27.433"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:22.269" endtime="20230129 13:41:27.433"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:41:27.449" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:41:27.434" endtime="20230129 13:41:27.449"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:41:29.451" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:41:27.451" endtime="20230129 13:41:29.451"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:29.602" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:29.451" endtime="20230129 13:41:29.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:41:29.603" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:41:29.603" endtime="20230129 13:41:29.673"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:27.450" endtime="20230129 13:41:29.673"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:27.449" endtime="20230129 13:41:29.673"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:27.434" endtime="20230129 13:41:29.673"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Software</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:41:29.674" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]</msg>
+<status status="PASS" starttime="20230129 13:41:29.674" endtime="20230129 13:41:29.674"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:41:29.674" endtime="20230129 13:41:29.966"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:30.107" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-2.png"&gt;&lt;img src="selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:29.966" endtime="20230129 13:41:30.107"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:41:30.108" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]'.</msg>
+<status status="PASS" starttime="20230129 13:41:30.107" endtime="20230129 13:41:31.532"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:29.674" endtime="20230129 13:41:31.533"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:32.085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:31.534" endtime="20230129 13:41:32.085"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Features</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:41:32.086" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Features')]</msg>
+<status status="PASS" starttime="20230129 13:41:32.085" endtime="20230129 13:41:32.086"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:41:32.086" endtime="20230129 13:41:32.402"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:32.488" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-3.png"&gt;&lt;img src="selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:32.402" endtime="20230129 13:41:32.488"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:41:32.489" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Features')]'.</msg>
+<status status="PASS" starttime="20230129 13:41:32.488" endtime="20230129 13:41:33.419"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:33.591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:33.419" endtime="20230129 13:41:33.592"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:32.085" endtime="20230129 13:41:33.592"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:33.869" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:33.592" endtime="20230129 13:41:33.869"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>How agile teams build and support world class software</arg>
+<arg>${EMPTY}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:41:33.871" level="INFO">${c} = //main/div//*[contains(text(),'How agile teams build and support world class software')]</msg>
+<status status="PASS" starttime="20230129 13:41:33.871" endtime="20230129 13:41:33.871"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:33.982" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-4.png"&gt;&lt;img src="selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:33.872" endtime="20230129 13:41:33.982"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:41:34.005" level="INFO">Element '//main/div//*[contains(text(),'How agile teams build and support world class software')]' contains text 'How agile teams build and support world class software'.</msg>
+<status status="PASS" starttime="20230129 13:41:33.982" endtime="20230129 13:41:34.005"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:33.870" endtime="20230129 13:41:34.006"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Get it free</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:41:34.007" level="INFO">${c} = //main/div//*[contains(text(),' Get it free ')]</msg>
+<status status="PASS" starttime="20230129 13:41:34.006" endtime="20230129 13:41:34.007"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:34.125" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-5.png"&gt;&lt;img src="selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:34.007" endtime="20230129 13:41:34.125"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:41:34.160" level="INFO">Element '//main/div//*[contains(text(),' Get it free ')]' contains text 'Get it free'.</msg>
+<status status="PASS" starttime="20230129 13:41:34.125" endtime="20230129 13:41:34.161"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:34.006" endtime="20230129 13:41:34.161"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Jira Software features</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:41:34.163" level="INFO">${c} = //main/div//*[contains(text(),' Jira Software features ')]</msg>
+<status status="PASS" starttime="20230129 13:41:34.162" endtime="20230129 13:41:34.163"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:34.262" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-6.png"&gt;&lt;img src="selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:34.163" endtime="20230129 13:41:34.262"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:41:34.285" level="INFO">Element '//main/div//*[contains(text(),' Jira Software features ')]' contains text 'Jira Software features'.</msg>
+<status status="PASS" starttime="20230129 13:41:34.262" endtime="20230129 13:41:34.285"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:34.161" endtime="20230129 13:41:34.285"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:41:34.286" endtime="20230129 13:41:41.338"/>
+</kw>
+<tag>Jira Software Features</tag>
+<status status="PASS" starttime="20230129 13:41:22.268" endtime="20230129 13:41:41.339"/>
+</test>
+<test id="s1-t2" name="Go to Products Jira Software Product Guide" line="28">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:41:41.342" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:41:41.342" endtime="20230129 13:41:45.970"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:46.285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:45.970" endtime="20230129 13:41:46.285"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:41.341" endtime="20230129 13:41:46.285"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:41:46.302" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:41:46.287" endtime="20230129 13:41:46.302"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:41:48.304" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:41:46.303" endtime="20230129 13:41:48.304"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:48.434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-7.png"&gt;&lt;img src="selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:48.304" endtime="20230129 13:41:48.434"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:41:48.435" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:41:48.434" endtime="20230129 13:41:48.489"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:46.303" endtime="20230129 13:41:48.491"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:46.302" endtime="20230129 13:41:48.491"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:46.286" endtime="20230129 13:41:48.491"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Software</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:41:48.494" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]</msg>
+<status status="PASS" starttime="20230129 13:41:48.494" endtime="20230129 13:41:48.494"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:41:48.494" endtime="20230129 13:41:48.793"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:48.936" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-8.png"&gt;&lt;img src="selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:48.794" endtime="20230129 13:41:48.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:41:48.936" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]'.</msg>
+<status status="PASS" starttime="20230129 13:41:48.936" endtime="20230129 13:41:51.457"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:48.493" endtime="20230129 13:41:51.457"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:51.691" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:51.458" endtime="20230129 13:41:51.691"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Product guide</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:41:51.692" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Product guide')]</msg>
+<status status="PASS" starttime="20230129 13:41:51.692" endtime="20230129 13:41:51.692"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:41:51.692" endtime="20230129 13:41:51.981"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:52.108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-9.png"&gt;&lt;img src="selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:51.981" endtime="20230129 13:41:52.108"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:41:52.108" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Product guide')]'.</msg>
+<status status="PASS" starttime="20230129 13:41:52.108" endtime="20230129 13:41:52.856"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:53.088" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:52.856" endtime="20230129 13:41:53.088"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:51.691" endtime="20230129 13:41:53.088"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:41:53.341" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:53.088" endtime="20230129 13:41:53.341"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Everything you need to know about buying, using, and customizing Jira Software.</arg>
+<arg>${EMPTY}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:41:53.343" level="INFO">${c} = //main/div//*[contains(text(),'Everything you need to know about buying, using, and customizing Jira Software.')]</msg>
+<status status="PASS" starttime="20230129 13:41:53.343" endtime="20230129 13:41:53.343"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:53.446" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-10.png"&gt;&lt;img src="selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:53.343" endtime="20230129 13:41:53.446"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:41:53.462" level="INFO">Element '//main/div//*[contains(text(),'Everything you need to know about buying, using, and customizing Jira Software.')]' contains text 'Everything you need to know about buying, using, and customizing Jira Software.'.</msg>
+<status status="PASS" starttime="20230129 13:41:53.446" endtime="20230129 13:41:53.462"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:53.342" endtime="20230129 13:41:53.462"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Jira Software guides and tutorials</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:41:53.464" level="INFO">${c} = //main/div//*[contains(text(),' Jira Software guides and tutorials ')]</msg>
+<status status="PASS" starttime="20230129 13:41:53.463" endtime="20230129 13:41:53.464"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:41:53.571" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-11.png"&gt;&lt;img src="selenium-element-screenshot-11.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:41:53.464" endtime="20230129 13:41:53.571"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:41:53.599" level="INFO">Element '//main/div//*[contains(text(),' Jira Software guides and tutorials ')]' contains text 'Jira Software guides and tutorials'.</msg>
+<status status="PASS" starttime="20230129 13:41:53.571" endtime="20230129 13:41:53.599"/>
+</kw>
+<status status="PASS" starttime="20230129 13:41:53.463" endtime="20230129 13:41:53.599"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:41:53.601" endtime="20230129 13:42:00.659"/>
+</kw>
+<tag>Jira Software Product Guide</tag>
+<status status="PASS" starttime="20230129 13:41:41.341" endtime="20230129 13:42:00.661"/>
+</test>
+<test id="s1-t3" name="Go to Products Jira Software Templates" line="40">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:42:00.667" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:42:00.666" endtime="20230129 13:42:05.249"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:05.849" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:05.249" endtime="20230129 13:42:05.849"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:00.665" endtime="20230129 13:42:05.849"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:42:05.861" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:42:05.849" endtime="20230129 13:42:05.861"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:42:07.863" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:42:05.862" endtime="20230129 13:42:07.863"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:07.961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-12.png"&gt;&lt;img src="selenium-element-screenshot-12.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:07.863" endtime="20230129 13:42:07.961"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:07.962" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:42:07.961" endtime="20230129 13:42:08.021"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:05.862" endtime="20230129 13:42:08.021"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:05.862" endtime="20230129 13:42:08.021"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:05.849" endtime="20230129 13:42:08.021"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Software</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:42:08.022" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]</msg>
+<status status="PASS" starttime="20230129 13:42:08.022" endtime="20230129 13:42:08.022"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:42:08.023" endtime="20230129 13:42:08.328"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:08.484" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-13.png"&gt;&lt;img src="selenium-element-screenshot-13.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:08.328" endtime="20230129 13:42:08.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:08.485" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]'.</msg>
+<status status="PASS" starttime="20230129 13:42:08.485" endtime="20230129 13:42:11.232"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:08.022" endtime="20230129 13:42:11.232"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:11.436" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:11.232" endtime="20230129 13:42:11.436"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Templates</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:42:11.437" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Templates')]</msg>
+<status status="PASS" starttime="20230129 13:42:11.437" endtime="20230129 13:42:11.437"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:42:11.437" endtime="20230129 13:42:11.720"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:11.835" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-14.png"&gt;&lt;img src="selenium-element-screenshot-14.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:11.720" endtime="20230129 13:42:11.835"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:11.835" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Templates')]'.</msg>
+<status status="PASS" starttime="20230129 13:42:11.835" endtime="20230129 13:42:12.874"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:13.353" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:12.874" endtime="20230129 13:42:13.353"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:11.437" endtime="20230129 13:42:13.353"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:13.552" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:13.354" endtime="20230129 13:42:13.552"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>There’s a Jira template for that</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:42:13.553" level="INFO">${c} = //main/div//*[contains(text(),' There’s a Jira template for that ')]</msg>
+<status status="PASS" starttime="20230129 13:42:13.553" endtime="20230129 13:42:13.553"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:13.655" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-15.png"&gt;&lt;img src="selenium-element-screenshot-15.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:13.553" endtime="20230129 13:42:13.655"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:42:13.682" level="INFO">Element '//main/div//*[contains(text(),' There’s a Jira template for that ')]' contains text 'There’s a Jira template for that'.</msg>
+<status status="PASS" starttime="20230129 13:42:13.655" endtime="20230129 13:42:13.682"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:13.553" endtime="20230129 13:42:13.682"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Choose from dozens of pre-configured Jira templates, spanning teams, departments, and categories, to guide your team’s next project to success.</arg>
+<arg>${EMPTY}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:42:13.684" level="INFO">${c} = //main/div//*[contains(text(),'Choose from dozens of pre-configured Jira templates, spanning teams, departments, and categories, to guide your team’s next project to success.')]</msg>
+<status status="PASS" starttime="20230129 13:42:13.684" endtime="20230129 13:42:13.684"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:13.973" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-16.png"&gt;&lt;img src="selenium-element-screenshot-16.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:13.684" endtime="20230129 13:42:13.973"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:42:13.998" level="INFO">Element '//main/div//*[contains(text(),'Choose from dozens of pre-configured Jira templates, spanning teams, departments, and categories, to guide your team’s next project to success.')]' contains text 'Choose from dozens of pre-configured Jira templates, spanning teams, departments, and categories, to guide your team’s next project to success.'.</msg>
+<status status="PASS" starttime="20230129 13:42:13.973" endtime="20230129 13:42:13.998"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:13.682" endtime="20230129 13:42:13.998"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:42:13.998" endtime="20230129 13:42:21.134"/>
+</kw>
+<tag>Jira Software Templates</tag>
+<status status="PASS" starttime="20230129 13:42:00.664" endtime="20230129 13:42:21.136"/>
+</test>
+<test id="s1-t4" name="Go to Products Jira Software Pricing" line="53">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:42:21.141" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:42:21.141" endtime="20230129 13:42:25.178"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:25.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:25.178" endtime="20230129 13:42:25.497"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:21.140" endtime="20230129 13:42:25.497"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:42:25.512" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:42:25.498" endtime="20230129 13:42:25.512"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:42:27.513" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:42:25.513" endtime="20230129 13:42:27.513"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:27.662" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-17.png"&gt;&lt;img src="selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:27.513" endtime="20230129 13:42:27.662"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:27.662" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:42:27.662" endtime="20230129 13:42:27.717"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:25.513" endtime="20230129 13:42:27.717"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:25.512" endtime="20230129 13:42:27.717"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:25.498" endtime="20230129 13:42:27.717"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Software</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:42:27.718" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]</msg>
+<status status="PASS" starttime="20230129 13:42:27.718" endtime="20230129 13:42:27.719"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:42:27.720" endtime="20230129 13:42:28.006"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:28.182" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-18.png"&gt;&lt;img src="selenium-element-screenshot-18.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:28.007" endtime="20230129 13:42:28.182"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:28.182" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]'.</msg>
+<status status="PASS" starttime="20230129 13:42:28.182" endtime="20230129 13:42:29.398"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:27.717" endtime="20230129 13:42:29.398"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:29.746" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:29.399" endtime="20230129 13:42:29.746"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Pricing</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:42:29.748" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]</msg>
+<status status="PASS" starttime="20230129 13:42:29.748" endtime="20230129 13:42:29.748"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:42:29.748" endtime="20230129 13:42:30.129"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:30.248" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-19.png"&gt;&lt;img src="selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:30.130" endtime="20230129 13:42:30.248"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:30.248" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]'.</msg>
+<status status="PASS" starttime="20230129 13:42:30.248" endtime="20230129 13:42:31.156"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:31.362" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:31.156" endtime="20230129 13:42:31.362"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:29.747" endtime="20230129 13:42:31.363"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:31.686" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:31.363" endtime="20230129 13:42:31.686"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:42:31.687" endtime="20230129 13:42:38.779"/>
+</kw>
+<tag>Jira Software Pricing</tag>
+<status status="PASS" starttime="20230129 13:42:21.139" endtime="20230129 13:42:38.780"/>
+</test>
+<test id="s1-t5" name="Go to Products Jira Software Enterprise" line="63">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:42:38.786" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:42:38.785" endtime="20230129 13:42:43.379"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:44.102" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:43.379" endtime="20230129 13:42:44.102"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:38.784" endtime="20230129 13:42:44.102"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:42:44.118" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:42:44.104" endtime="20230129 13:42:44.118"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:42:46.122" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:42:44.121" endtime="20230129 13:42:46.122"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:46.266" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-20.png"&gt;&lt;img src="selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:46.122" endtime="20230129 13:42:46.266"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:46.266" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:42:46.266" endtime="20230129 13:42:46.335"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:44.120" endtime="20230129 13:42:46.335"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:44.119" endtime="20230129 13:42:46.335"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:44.103" endtime="20230129 13:42:46.335"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Software</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:42:46.337" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]</msg>
+<status status="PASS" starttime="20230129 13:42:46.337" endtime="20230129 13:42:46.337"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:42:46.337" endtime="20230129 13:42:46.621"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:46.771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-21.png"&gt;&lt;img src="selenium-element-screenshot-21.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:46.621" endtime="20230129 13:42:46.771"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:46.772" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]'.</msg>
+<status status="PASS" starttime="20230129 13:42:46.772" endtime="20230129 13:42:49.459"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:46.336" endtime="20230129 13:42:49.459"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:49.672" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:49.460" endtime="20230129 13:42:49.672"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Enterprise</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:42:49.673" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Enterprise')]</msg>
+<status status="PASS" starttime="20230129 13:42:49.673" endtime="20230129 13:42:49.673"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:42:49.673" endtime="20230129 13:42:49.958"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:50.062" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-22.png"&gt;&lt;img src="selenium-element-screenshot-22.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:49.958" endtime="20230129 13:42:50.062"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:42:50.063" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Enterprise')]'.</msg>
+<status status="PASS" starttime="20230129 13:42:50.062" endtime="20230129 13:42:50.971"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:51.259" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:50.972" endtime="20230129 13:42:51.259"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:49.673" endtime="20230129 13:42:51.259"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:51.469" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:51.260" endtime="20230129 13:42:51.469"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Agile, integrated development at scale</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:42:51.470" level="INFO">${c} = //main/div//*[contains(text(),' Agile, integrated development at scale ')]</msg>
+<status status="PASS" starttime="20230129 13:42:51.470" endtime="20230129 13:42:51.470"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:51.575" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-23.png"&gt;&lt;img src="selenium-element-screenshot-23.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:51.470" endtime="20230129 13:42:51.575"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:42:51.596" level="INFO">Element '//main/div//*[contains(text(),' Agile, integrated development at scale ')]' contains text 'Agile, integrated development at scale'.</msg>
+<status status="PASS" starttime="20230129 13:42:51.575" endtime="20230129 13:42:51.596"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:51.470" endtime="20230129 13:42:51.596"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Cloud Enterprise</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:42:51.598" level="INFO">${c} = //main/div//*[contains(text(),' Cloud Enterprise ')]</msg>
+<status status="PASS" starttime="20230129 13:42:51.597" endtime="20230129 13:42:51.598"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:51.714" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-24.png"&gt;&lt;img src="selenium-element-screenshot-24.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:51.598" endtime="20230129 13:42:51.714"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:42:51.737" level="INFO">Element '//main/div//*[contains(text(),' Cloud Enterprise ')]' contains text 'Cloud Enterprise'.</msg>
+<status status="PASS" starttime="20230129 13:42:51.714" endtime="20230129 13:42:51.737"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:51.597" endtime="20230129 13:42:51.737"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Our top-tier plan expands on the</arg>
+<arg>${EMPTY}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:42:51.739" level="INFO">${c} = //main/div//*[contains(text(),'Our top-tier plan expands on the')]</msg>
+<status status="PASS" starttime="20230129 13:42:51.738" endtime="20230129 13:42:51.739"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:42:51.850" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-25.png"&gt;&lt;img src="selenium-element-screenshot-25.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:51.739" endtime="20230129 13:42:51.850"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:42:51.870" level="INFO">Element '//main/div//*[contains(text(),'Our top-tier plan expands on the')]' contains text 'Our top-tier plan expands on the'.</msg>
+<status status="PASS" starttime="20230129 13:42:51.850" endtime="20230129 13:42:51.870"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:51.738" endtime="20230129 13:42:51.870"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:42:52.063" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:42:51.871" endtime="20230129 13:42:52.063"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:42:52.064" endtime="20230129 13:42:59.140"/>
+</kw>
+<tag>Jira Software Enterprise</tag>
+<status status="PASS" starttime="20230129 13:42:38.783" endtime="20230129 13:42:59.141"/>
+</test>
+<test id="s1-t6" name="Go to Jira Align" line="77">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:42:59.146" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:42:59.145" endtime="20230129 13:43:03.332"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:03.646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:03.332" endtime="20230129 13:43:03.646"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:59.145" endtime="20230129 13:43:03.646"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:43:03.661" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:43:03.647" endtime="20230129 13:43:03.661"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:43:05.663" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:43:03.662" endtime="20230129 13:43:05.663"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:05.817" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-26.png"&gt;&lt;img src="selenium-element-screenshot-26.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:05.663" endtime="20230129 13:43:05.817"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:05.817" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:43:05.817" endtime="20230129 13:43:05.866"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:03.662" endtime="20230129 13:43:05.867"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:03.661" endtime="20230129 13:43:05.867"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:03.646" endtime="20230129 13:43:05.867"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Align</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:43:05.868" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Align')]</msg>
+<status status="PASS" starttime="20230129 13:43:05.868" endtime="20230129 13:43:05.868"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:05.868" endtime="20230129 13:43:06.163"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:06.332" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-27.png"&gt;&lt;img src="selenium-element-screenshot-27.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:06.163" endtime="20230129 13:43:06.332"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:06.333" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Align')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:06.332" endtime="20230129 13:43:09.312"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:05.867" endtime="20230129 13:43:09.312"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:09.479" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:09.313" endtime="20230129 13:43:09.479"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Solutions</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:09.480" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Solutions')]</msg>
+<status status="PASS" starttime="20230129 13:43:09.480" endtime="20230129 13:43:09.480"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:09.480" endtime="20230129 13:43:09.771"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:09.899" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-28.png"&gt;&lt;img src="selenium-element-screenshot-28.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:09.772" endtime="20230129 13:43:09.899"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:09.900" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Solutions')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:09.899" endtime="20230129 13:43:10.626"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:11.043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:10.626" endtime="20230129 13:43:11.043"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:09.480" endtime="20230129 13:43:11.043"/>
+</kw>
+<kw name="Verification correct page" library="navigateAtlassian">
+<arg>Accelerate strategy and unlock your agile potential</arg>
+<arg>${space}</arg>
+<kw name="Verify Correct Title page" library="atlassian">
+<var>${c}</var>
+<arg>${title}</arg>
+<arg>${space}</arg>
+<msg timestamp="20230129 13:43:11.044" level="INFO">${c} = //main/div//*[contains(text(),' Accelerate strategy and unlock your agile potential ')]</msg>
+<status status="PASS" starttime="20230129 13:43:11.044" endtime="20230129 13:43:11.044"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${c}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:11.260" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-29.png"&gt;&lt;img src="selenium-element-screenshot-29.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:11.044" endtime="20230129 13:43:11.260"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${c}</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230129 13:43:11.285" level="INFO">Element '//main/div//*[contains(text(),' Accelerate strategy and unlock your agile potential ')]' contains text 'Accelerate strategy and unlock your agile potential'.</msg>
+<status status="PASS" starttime="20230129 13:43:11.261" endtime="20230129 13:43:11.285"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:11.044" endtime="20230129 13:43:11.285"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:11.496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:11.285" endtime="20230129 13:43:11.496"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:43:11.496" endtime="20230129 13:43:18.488"/>
+</kw>
+<status status="PASS" starttime="20230129 13:42:59.144" endtime="20230129 13:43:18.489"/>
+</test>
+<test id="s1-t7" name="Navigation Test" line="88">
+<kw name="Open my Chrome" library="browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230129 13:43:18.493" level="INFO">Opening browser 'chrome' to base url 'https://atlassian.com'.</msg>
+<status status="PASS" starttime="20230129 13:43:18.492" endtime="20230129 13:43:22.354"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:22.685" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:22.354" endtime="20230129 13:43:22.685"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:18.492" endtime="20230129 13:43:22.686"/>
+</kw>
+<kw name="Make cookies dissapear" library="Acceptcookies">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${c}</var>
+<arg>${cookiesatlassian}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230129 13:43:22.701" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20230129 13:43:22.686" endtime="20230129 13:43:22.701"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${c}&gt;0</arg>
+<arg>accept cookies atlassian</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Accept cookies atlassian" library="Acceptcookies">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230129 13:43:24.702" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230129 13:43:22.701" endtime="20230129 13:43:24.702"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:24.846" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-30.png"&gt;&lt;img src="selenium-element-screenshot-30.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:24.702" endtime="20230129 13:43:24.846"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesatlassian}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:24.847" level="INFO">Clicking element '//button[@id='onetrust-accept-btn-handler']'.</msg>
+<status status="PASS" starttime="20230129 13:43:24.847" endtime="20230129 13:43:24.903"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:22.701" endtime="20230129 13:43:24.903"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:22.701" endtime="20230129 13:43:24.903"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:22.686" endtime="20230129 13:43:24.903"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Software</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:43:24.905" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]</msg>
+<status status="PASS" starttime="20230129 13:43:24.904" endtime="20230129 13:43:24.905"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:24.905" endtime="20230129 13:43:25.189"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:25.334" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-31.png"&gt;&lt;img src="selenium-element-screenshot-31.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:25.189" endtime="20230129 13:43:25.334"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:25.335" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Software')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:25.334" endtime="20230129 13:43:26.578"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:24.904" endtime="20230129 13:43:26.578"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Features</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:26.580" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Features')]</msg>
+<status status="PASS" starttime="20230129 13:43:26.579" endtime="20230129 13:43:26.580"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:26.580" endtime="20230129 13:43:26.877"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:27.216" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-32.png"&gt;&lt;img src="selenium-element-screenshot-32.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:26.877" endtime="20230129 13:43:27.217"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:27.217" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Features')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:27.217" endtime="20230129 13:43:28.131"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:28.300" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:28.131" endtime="20230129 13:43:28.300"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:26.579" endtime="20230129 13:43:28.300"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Product guide</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:28.301" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Product guide')]</msg>
+<status status="PASS" starttime="20230129 13:43:28.301" endtime="20230129 13:43:28.301"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:28.301" endtime="20230129 13:43:28.728"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:28.866" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-33.png"&gt;&lt;img src="selenium-element-screenshot-33.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:28.728" endtime="20230129 13:43:28.867"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:28.867" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Product guide')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:28.867" endtime="20230129 13:43:29.661"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:29.909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:29.661" endtime="20230129 13:43:29.910"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:28.301" endtime="20230129 13:43:29.910"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Templates</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:29.911" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Templates')]</msg>
+<status status="PASS" starttime="20230129 13:43:29.911" endtime="20230129 13:43:29.911"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:29.911" endtime="20230129 13:43:30.314"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:30.424" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-34.png"&gt;&lt;img src="selenium-element-screenshot-34.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:30.314" endtime="20230129 13:43:30.424"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:30.424" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Templates')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:30.424" endtime="20230129 13:43:31.400"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:31.815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:31.400" endtime="20230129 13:43:31.815"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:29.910" endtime="20230129 13:43:31.815"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230129 13:43:31.815" endtime="20230129 13:43:32.967"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Pricing</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:32.968" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]</msg>
+<status status="PASS" starttime="20230129 13:43:32.967" endtime="20230129 13:43:32.968"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:32.968" endtime="20230129 13:43:33.266"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:33.396" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-35.png"&gt;&lt;img src="selenium-element-screenshot-35.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:33.266" endtime="20230129 13:43:33.396"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:33.396" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:33.396" endtime="20230129 13:43:34.310"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:34.529" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:34.310" endtime="20230129 13:43:34.529"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:32.967" endtime="20230129 13:43:34.529"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Enterprise</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:34.530" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Enterprise')]</msg>
+<status status="PASS" starttime="20230129 13:43:34.530" endtime="20230129 13:43:34.530"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:34.531" endtime="20230129 13:43:34.882"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:35.041" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-36.png"&gt;&lt;img src="selenium-element-screenshot-36.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:34.882" endtime="20230129 13:43:35.041"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:35.042" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Enterprise')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:35.041" endtime="20230129 13:43:35.914"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:36.152" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:35.914" endtime="20230129 13:43:36.152"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:34.529" endtime="20230129 13:43:36.152"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Align</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:43:36.152" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Align')]</msg>
+<status status="PASS" starttime="20230129 13:43:36.152" endtime="20230129 13:43:36.152"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:36.154" endtime="20230129 13:43:36.548"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:36.671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-37.png"&gt;&lt;img src="selenium-element-screenshot-37.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:36.549" endtime="20230129 13:43:36.671"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:36.672" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Align')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:36.672" endtime="20230129 13:43:38.559"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:36.152" endtime="20230129 13:43:38.559"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Solutions</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:38.560" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Solutions')]</msg>
+<status status="PASS" starttime="20230129 13:43:38.560" endtime="20230129 13:43:38.560"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:38.560" endtime="20230129 13:43:38.843"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:38.982" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-38.png"&gt;&lt;img src="selenium-element-screenshot-38.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:38.843" endtime="20230129 13:43:38.982"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:38.982" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Solutions')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:38.982" endtime="20230129 13:43:39.694"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:39.930" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:39.694" endtime="20230129 13:43:39.930"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:38.560" endtime="20230129 13:43:39.931"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Platform</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:39.932" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Platform')]</msg>
+<status status="PASS" starttime="20230129 13:43:39.932" endtime="20230129 13:43:39.932"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:39.932" endtime="20230129 13:43:40.246"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:40.344" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-39.png"&gt;&lt;img src="selenium-element-screenshot-39.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:40.246" endtime="20230129 13:43:40.345"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:40.345" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Platform')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:40.345" endtime="20230129 13:43:41.063"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:41.273" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:41.063" endtime="20230129 13:43:41.273"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:39.931" endtime="20230129 13:43:41.273"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Resources</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:41.274" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Resources')]</msg>
+<status status="PASS" starttime="20230129 13:43:41.274" endtime="20230129 13:43:41.274"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:41.274" endtime="20230129 13:43:41.597"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:41.701" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-40.png"&gt;&lt;img src="selenium-element-screenshot-40.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:41.597" endtime="20230129 13:43:41.702"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:41.703" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Resources')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:41.702" endtime="20230129 13:43:42.613"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:42.861" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:42.613" endtime="20230129 13:43:42.861"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:41.274" endtime="20230129 13:43:42.861"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Services</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:42.862" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Services')]</msg>
+<status status="PASS" starttime="20230129 13:43:42.862" endtime="20230129 13:43:42.862"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:42.862" endtime="20230129 13:43:43.297"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:43.401" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-41.png"&gt;&lt;img src="selenium-element-screenshot-41.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:43.297" endtime="20230129 13:43:43.401"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:43.402" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Services')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:43.401" endtime="20230129 13:43:44.164"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:44.410" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:44.164" endtime="20230129 13:43:44.410"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:42.861" endtime="20230129 13:43:44.410"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Pricing</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:44.412" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]</msg>
+<status status="PASS" starttime="20230129 13:43:44.412" endtime="20230129 13:43:44.412"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:44.412" endtime="20230129 13:43:44.786"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:44.898" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-42.png"&gt;&lt;img src="selenium-element-screenshot-42.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:44.786" endtime="20230129 13:43:44.898"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:44.902" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:44.900" endtime="20230129 13:43:45.762"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:45.947" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:45.762" endtime="20230129 13:43:45.947"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:44.411" endtime="20230129 13:43:45.947"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Jira Service Management</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:43:45.948" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Service Management')]</msg>
+<status status="PASS" starttime="20230129 13:43:45.947" endtime="20230129 13:43:45.948"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:45.948" endtime="20230129 13:43:46.403"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:46.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-43.png"&gt;&lt;img src="selenium-element-screenshot-43.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:46.403" endtime="20230129 13:43:46.497"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:46.501" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Jira Service Management')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:46.497" endtime="20230129 13:43:47.549"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:45.947" endtime="20230129 13:43:47.549"/>
+</kw>
+<kw name="Select Atlassian footer links" library="navigateAtlassian">
+<arg>Confluence</arg>
+<kw name="Select Atlassian Link" library="atlassian">
+<var>${ab}</var>
+<arg>${link}</arg>
+<msg timestamp="20230129 13:43:47.550" level="INFO">${ab} = //*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Confluence')]</msg>
+<status status="PASS" starttime="20230129 13:43:47.550" endtime="20230129 13:43:47.550"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:47.550" endtime="20230129 13:43:48.020"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:48.298" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-44.png"&gt;&lt;img src="selenium-element-screenshot-44.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:48.021" endtime="20230129 13:43:48.298"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:48.300" level="INFO">Clicking element '//*[@id='footer']/*/*/*/*/*/*/*/*/*[contains(text(),'Confluence')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:48.298" endtime="20230129 13:43:50.754"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:47.549" endtime="20230129 13:43:50.754"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Features</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:50.756" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Features')]</msg>
+<status status="PASS" starttime="20230129 13:43:50.755" endtime="20230129 13:43:50.756"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:50.756" endtime="20230129 13:43:51.050"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:51.189" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-45.png"&gt;&lt;img src="selenium-element-screenshot-45.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:51.050" endtime="20230129 13:43:51.189"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:51.189" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Features')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:51.189" endtime="20230129 13:43:51.945"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:52.131" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:51.945" endtime="20230129 13:43:52.131"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:50.755" endtime="20230129 13:43:52.133"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Product guide</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:52.134" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Product guide')]</msg>
+<status status="PASS" starttime="20230129 13:43:52.133" endtime="20230129 13:43:52.134"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:52.134" endtime="20230129 13:43:52.553"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:52.650" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-46.png"&gt;&lt;img src="selenium-element-screenshot-46.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:52.553" endtime="20230129 13:43:52.650"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:52.651" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Product guide')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:52.651" endtime="20230129 13:43:53.415"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:53.992" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:53.415" endtime="20230129 13:43:53.992"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:52.133" endtime="20230129 13:43:53.992"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Templates</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:53.993" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Templates')]</msg>
+<status status="PASS" starttime="20230129 13:43:53.993" endtime="20230129 13:43:53.993"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:53.993" endtime="20230129 13:43:54.270"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:54.370" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-47.png"&gt;&lt;img src="selenium-element-screenshot-47.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:54.270" endtime="20230129 13:43:54.370"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:54.370" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Templates')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:54.370" endtime="20230129 13:43:55.429"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:55.743" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:55.429" endtime="20230129 13:43:55.744"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:53.992" endtime="20230129 13:43:55.744"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Pricing</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:55.745" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]</msg>
+<status status="PASS" starttime="20230129 13:43:55.745" endtime="20230129 13:43:55.745"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:55.745" endtime="20230129 13:43:56.234"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:56.338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-48.png"&gt;&lt;img src="selenium-element-screenshot-48.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:56.234" endtime="20230129 13:43:56.338"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:56.339" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Pricing')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:56.338" endtime="20230129 13:43:57.527"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:57.952" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:57.527" endtime="20230129 13:43:57.952"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:55.744" endtime="20230129 13:43:57.952"/>
+</kw>
+<kw name="Select Atlassian header links" library="navigateAtlassian">
+<arg>Enterprise</arg>
+<doc>This is a sample</doc>
+<kw name="Select Header menu" library="atlassian">
+<var>${b}</var>
+<arg>${link1}</arg>
+<msg timestamp="20230129 13:43:57.952" level="INFO">${b} = //div[@class='column nav-comp-column']//*[contains(text(),'Enterprise')]</msg>
+<status status="PASS" starttime="20230129 13:43:57.952" endtime="20230129 13:43:57.952"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230129 13:43:57.952" endtime="20230129 13:43:58.378"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230129 13:43:58.518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-49.png"&gt;&lt;img src="selenium-element-screenshot-49.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:58.378" endtime="20230129 13:43:58.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${b}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230129 13:43:58.519" level="INFO">Clicking element '//div[@class='column nav-comp-column']//*[contains(text(),'Enterprise')]'.</msg>
+<status status="PASS" starttime="20230129 13:43:58.518" endtime="20230129 13:43:59.358"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230129 13:43:59.570" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230129 13:43:59.358" endtime="20230129 13:43:59.570"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:57.952" endtime="20230129 13:43:59.571"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230129 13:43:59.571" endtime="20230129 13:44:07.064"/>
+</kw>
+<status status="PASS" starttime="20230129 13:43:18.491" endtime="20230129 13:44:07.065"/>
+</test>
+<status status="PASS" starttime="20230129 13:41:21.919" endtime="20230129 13:44:07.069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Jira Software Enterprise</stat>
+<stat pass="1" fail="0" skip="0">Jira Software Features</stat>
+<stat pass="1" fail="0" skip="0">Jira Software Pricing</stat>
+<stat pass="1" fail="0" skip="0">Jira Software Product Guide</stat>
+<stat pass="1" fail="0" skip="0">Jira Software Templates</stat>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Atlassian">Atlassian</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

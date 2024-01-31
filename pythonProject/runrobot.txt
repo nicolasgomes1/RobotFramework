@@ -1,0 +1,8 @@
+the runrobot.bat is to be used to save at the test suite level the logs
+
+It will create a directory based on the test suit and all data will be stored inside the folder
+
+It has 3 arguments
+    .\runrobot.bat CodeAcademyTS clickresources
+
+the additional argument is the tags that are optional
